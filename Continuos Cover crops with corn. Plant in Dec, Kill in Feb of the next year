@@ -1,3 +1,4 @@
+#Self
 name                     conds      alts      acts       !plant and harvest corn, then plant rye and kill 2017-23
 pl_hv_sum_corn_rye           4         4         4  
 var                        obj   obj_num           lim_var            lim_op     lim_const      alt1      alt2      alt3      alt4  
