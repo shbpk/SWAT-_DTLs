@@ -1,0 +1,12 @@
+name                     conds      alts      acts       !plant and harvest corn, then plant rye and kill 2017-23
+pl_hv_sum_corn_rye           4         4         4  
+var                        obj   obj_num           lim_var            lim_op     lim_const      alt1      alt2      alt3      alt4  
+jday                       hru         0              null                 -      90.00000         =         -         -         -       ! If julian day [alt] 90
+jday                       hru         0              null                 -     250.00000         -         =         -         -       ! If julian day [alt] 250
+jday                       hru         0              null                 -     290.00000         -         -         =         -       ! If julian day [alt] 290
+jday                       hru         0              null                 -      60.00000         -         -         -         =       ! If julian day [alt] 60
+act_typ                    obj   obj_num              name            option         const        const2                fp  outcome           
+plant                      hru         0             Plant              corn       0.00000       0.00000              null  y   n   n   n   
+harvest                    hru         0      Harvest_Corn              corn       0.00000       0.00000             grain  n   y   n   n   
+plant                      hru         0         Plant_RYE               rye       0.00000       0.00000              null  n   n   y   n   
+kill                       hru         0          Kill_RYE               rye       0.00000       0.00000              null  n   n   n   y 
