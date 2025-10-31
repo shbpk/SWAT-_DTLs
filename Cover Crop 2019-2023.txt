@@ -1,0 +1,15 @@
+! This table simulates RYE as cover crop between years 2017 and 2023.
+name                   conds      alts      acts     !plant and harvest corn, then plant rye and kill 2017-23
+pl_hv_sum_corn_rye         6         4         4
+var                      obj   obj_num           lim_var            lim_op     lim_const      alt1      alt2      alt3      alt4
+jday                     hru         0              null                 -           125         =         -         -         -     ! Year 1 – May 5 Plant CORN
+jday                     hru         0              null                 -           273         -         =         -         -     ! Year 1 – Sep 30 Kill/Harvest CORN
+jday                     hru         0              null                 -           288         -         -         =         -     ! Year 1 – Oct 15 Plant RYE
+jday                     hru         0              null                 -           350         -         -         -         =     ! Year 1 – Oct 15 Harvest RYE
+year_cal                null         0              null                 -          2019         >         >         >         >
+year_cal                null         0              null                 -          2023         <         <         <         <
+act_typ                  obj   obj_num              name            option         const        const2                fp  outcome
+plant                    hru         0        plant_corn              corn             0             1              null  y  n  n  n
+harvest_kill             hru         0      harvest_corn              corn             0             1             grain  n  y  n  n
+plant                    hru         0         plant_rye               rye             0             1              null  n  n  y  n
+harvest_kill             hru         0       harvest_rye               rye             0             1             grain  n  n  n  y
