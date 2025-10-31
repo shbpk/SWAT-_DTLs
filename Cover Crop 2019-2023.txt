@@ -1,3 +1,4 @@
+# Self
 ! This table simulates RYE as cover crop between years 2017 and 2023.
 name                   conds      alts      acts     !plant and harvest corn, then plant rye and kill 2017-23
 pl_hv_sum_corn_rye         6         4         4
@@ -13,3 +14,4 @@ plant                    hru         0        plant_corn              corn      
 harvest_kill             hru         0      harvest_corn              corn             0             1             grain  n  y  n  n
 plant                    hru         0         plant_rye               rye             0             1              null  n  n  y  n
 harvest_kill             hru         0       harvest_rye               rye             0             1             grain  n  n  n  y
+
